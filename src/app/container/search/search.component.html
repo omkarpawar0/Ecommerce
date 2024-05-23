@@ -1,0 +1,22 @@
+<div class="ekart--search--product">
+  <input
+    type="text"
+    class="ekart-search-product-input"
+    #searchTexttt
+    (input)="withoutSeach($event)"
+  />
+  <button
+    class="btn btn-search"
+    [disabled]="!searchtextw"
+    [ngClass]="{ 'btn-not-true': !searchtextw }"
+    (click)="searchTextt()"
+  >
+    {{ searchtextw ? "Search 😁" : "write something😒" }}
+  </button>
+</div>
+
+<div class="ekart-search-result-for">
+  <p *ngIf="searchText != ''">
+    <strong> Search result for : </strong> {{ searchText }}
+  </p>
+</div>
